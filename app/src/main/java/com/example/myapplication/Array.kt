@@ -37,16 +37,32 @@ package com.example.myapplication
 //}
 
 
-fun main() {
-    val ageArray: IntArray = intArrayOf(19, 15, 26, 8, 45)
-    val nameArray: Array<String> = arrayOf("kk", "bb", "cc", "dd","pp")
+//fun main() {
+//    val ageArray: IntArray = intArrayOf(19, 15, 26, 8, 45)
+//    val nameArray: Array<String> = arrayOf("kk", "bb", "cc", "dd","pp")
+//
+//
+//    //repeat重要多少次，其中it是目前它重复的次数,从0开始到重复结束
+//    repeat(5){
+//        print(nameArray[it] + ":")
+//        println(ageArray[it])
+////        println("${nameArray[i]} : ${ageArray[i]}")
+//    }
+//
+//}
 
 
-    //repeat重要多少次，其中it是目前它重复的次数,从0开始到重复结束
-    repeat(5){
-        print(nameArray[it] + ":")
-        println(ageArray[it])
-//        println("${nameArray[i]} : ${ageArray[i]}")
-    }
+
+fun main(){
+    var height = emptyArray<Int>()
+    println("没装东西的数组长度${height.size}")
+    height = arrayOf(123,45,12313,123,5)
+    println("装了东西的数组长度${height.size}")
+
+
+
+
+
+
 
 }

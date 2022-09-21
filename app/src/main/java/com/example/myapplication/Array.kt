@@ -59,7 +59,8 @@ fun main() {
     println("装了东西的数组长度${height.size}")
 
     //二维数组
-    val students = Array(5) { IntArray(3) }
+    val students = Array(5) { IntArray(3) }  //第一种二维数组声明方式
+    val students2 = arrayOf(intArrayOf(157234, 82, 69), intArrayOf(157236, 43, 77), intArrayOf(157238, 76, 88))  //第二种二维数组声明方式
     students[0][0] = 157234
     students[0][1] = 82
     students[0][2] = 69
@@ -72,6 +73,24 @@ fun main() {
     students[3][0] = 157240
     students[3][1] = 89
     students[3][2] = 92
-
-
+    students[4][0] = 921
+    students[4][1] = 26
+    students[4][2] = 9
+//    println(students.indices)
+//    for (i in students.indices){
+//        for (j in 0 until students[i].size){
+//            println("${students[i][j]}")
+//        }
+//    }
+        for (i in students.indices){
+        for (j in 0 until students[i].size){
+            //选择遍历，像switch
+            when(j){
+                0 -> print("ID：${students[i][j]}" + " ")
+                1 -> print("Math：${students[i][j]}" + " ")
+                2 -> print("English：${students[i][j]}")
+            }
+            println()
+        }
+    }
 }

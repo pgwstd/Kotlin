@@ -52,17 +52,26 @@ package com.example.myapplication
 //}
 
 
-
-fun main(){
+fun main() {
     var height = emptyArray<Int>()
     println("没装东西的数组长度${height.size}")
-    height = arrayOf(123,45,12313,123,5)
+    height = arrayOf(123, 45, 12313, 123, 5)
     println("装了东西的数组长度${height.size}")
 
-
-
-
-
+    //二维数组
+    val students = Array(5) { IntArray(3) }
+    students[0][0] = 157234
+    students[0][1] = 82
+    students[0][2] = 69
+    students[1][0] = 157236
+    students[1][1] = 43
+    students[1][2] = 77
+    students[2][0] = 157238
+    students[2][1] = 76
+    students[2][2] = 88
+    students[3][0] = 157240
+    students[3][1] = 89
+    students[3][2] = 92
 
 
 }

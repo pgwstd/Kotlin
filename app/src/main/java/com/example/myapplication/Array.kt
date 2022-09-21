@@ -73,24 +73,26 @@ fun main() {
     students[3][0] = 157240
     students[3][1] = 89
     students[3][2] = 92
-    students[4][0] = 921
+    students[4][0] = 921220
     students[4][1] = 26
-    students[4][2] = 9
+    students[4][2] = 90
 //    println(students.indices)
-//    for (i in students.indices){
+    println("ID  Math  English")
+    for (i in students.indices){
+        for (j in 0 until students[i].size){
+            print("${students[i][j]}" + " ")
+        }
+        println()
+    }
+//        for (i in students.indices){
 //        for (j in 0 until students[i].size){
-//            println("${students[i][j]}")
+//            //选择遍历，像switch
+//            when(j){
+//                0 -> print("ID：${students[i][j]}" + " ")
+//                1 -> print("Math：${students[i][j]}" + " ")
+//                2 -> print("English：${students[i][j]}")
+//            }
+//            println()
 //        }
 //    }
-        for (i in students.indices){
-        for (j in 0 until students[i].size){
-            //选择遍历，像switch
-            when(j){
-                0 -> print("ID：${students[i][j]}" + " ")
-                1 -> print("Math：${students[i][j]}" + " ")
-                2 -> print("English：${students[i][j]}")
-            }
-            println()
-        }
-    }
 }

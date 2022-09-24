@@ -32,3 +32,15 @@ package com.example.myapplication
 //
 //}
 
+
+fun main(){
+    //when分支，像switch
+    var input: Any = 2
+    when(input){
+//        0 -> println("0")
+//        1 -> println("1")
+//        2 -> println("2")
+        in 0 .. 2 -> println("012")
+        else -> println(-1)
+    }
+}

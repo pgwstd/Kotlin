@@ -8,4 +8,14 @@ fun main(){
     else
         println("成年了")
 
+
+    println("*************")
+    val marriage = true  //定义boolean类型的变量
+    if (marriage){
+        println("为真")
+    }
+    else {
+        println("为假")
+    }
+
 }

@@ -35,12 +35,12 @@ package com.example.myapplication
 
 fun main(){
     //when分支，像switch
-    var input: Any = 2
+    var input: Any = 0
     when(input){
 //        0 -> println("0")
 //        1 -> println("1")
 //        2 -> println("2")
-        in 0 .. 2 -> println("012")
+        in 0 .. 2 -> println("012") //从0..2这个区间都可以被输去（左闭右闭）
         else -> println(-1)
     }
 }

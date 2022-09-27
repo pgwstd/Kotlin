@@ -8,3 +8,10 @@ class Teacher(name: String, age: Int): Human(name, age){
         println(this.name + " " + this.age)
     }
 }
+
+
+class Teacher2: Human{
+    constructor(name: String, age: Int): super(name, age){
+        println(this.name + " " + this.age)
+    }
+}

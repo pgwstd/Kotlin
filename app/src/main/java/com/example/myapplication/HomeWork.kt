@@ -1,6 +1,5 @@
-package com.example.helloworld
+package com.example.myapplication
 
-import java.lang.Math.random
 
 //Run接口与跑的方法
 interface Run{

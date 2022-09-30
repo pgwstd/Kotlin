@@ -11,7 +11,6 @@ interface Run{
 open class RacingCar(val position: Int)
 
 
-
 class Mercedes(position: Int, name: String): RacingCar(position), Run {
     override fun go(name: String, position: Int) {
         println("$name:$position")
@@ -32,7 +31,6 @@ class BMW(position: Int, name: String):RacingCar(position), Run {
 
     }
 }
-
 
 
 fun main(){

@@ -1,6 +1,10 @@
 package com.example.myapplication
-//方式一
+/**
+ * @author pgwstr
+ * @date
+ */
 
+//方式一
 //Run接口与跑的方法
 //interface Run{
 //    fun go(position: Int,name: String){

@@ -47,6 +47,7 @@ package com.example.myapplication
 //        F.go(Fspend,"Ferrari")
 //        B.go(Bspend,"BMW")
 //        println("----------------------")
+//        有问题，会出现两个200
 //        if (Mspend >= 200){
 //            println("The Winner is: Mercedes")
 //            SW = false

@@ -68,59 +68,125 @@ package com.example.myapplication
 //}
 
 //方式二
+//interface Run{
+//    fun go(position: Int,name: String){
+//        println("车开始跑")
+//    }
+//}
+//
+//open class RacingCar(var position: Int)
+//
+//
+//class Mercedes(position: Int, name: String): RacingCar(position), Run {
+//    override fun go(position: Int,name: String) {
+//        println("$name:$position")
+//    }
+//}
+//
+//class Ferrari(position: Int, name: String):RacingCar(position), Run {
+//    override fun go(position: Int,name: String) {
+//        println("$name:$position")
+//    }
+//}
+//
+//class BMW(position: Int, name: String):RacingCar(position), Run {
+//    override fun go(position: Int,name: String) {
+//        println("$name:$position")
+//    }
+//}
+//
+//
+//fun main(){
+//    var mSpend = 1
+//    var fSpend = 1
+//    var bSpend = 1
+//    val mercedes = Mercedes(75,"Mercedes")
+//    val ferrari = Ferrari(23,"Ferrari")
+//    val bmw = BMW(10,"BMW")
+//    while (true) {
+//        mSpend += ((1..5).random())
+//        fSpend += ((1..5).random())
+//        bSpend += ((1..5).random())
+//        mercedes.go(mSpend,"Mercedes")
+//        if (mSpend >= 200){
+//            println("----------------------")
+//            println("The Winner is: Mercedes")
+//            break
+//        }
+//        ferrari.go(fSpend,"Ferrari")
+//        if (fSpend >= 200){
+//            println("----------------------")
+//            println("The Winner is: Ferrari")
+//            break
+//        }
+//        bmw.go(bSpend,"BMW")
+//        if (bSpend >= 200){
+//            println("----------------------")
+//            println("The Winner is: BMW")
+//            break
+//        }
+//        println("----------------------")
+//    }
+//}
+
+//方式三
 interface Run{
-    fun go(position: Int,name: String){
-        println("车开始跑")
-    }
+    var name:String
+    fun go()
 }
 
 open class RacingCar(var position: Int)
 
 
-class Mercedes(position: Int, name: String): RacingCar(position), Run {
-    override fun go(position: Int,name: String) {
-        println("$name:$position")
+class Mercedes(position: Int, override var name: String): RacingCar(position), Run {
+    init {
+        this.position += (1..5).random()
+    }
+    override fun go() {
+      println("$name:$position")
     }
 }
 
 class Ferrari(position: Int, name: String):RacingCar(position), Run {
-    override fun go(position: Int,name: String) {
-        println("$name:$position")
+    override var name: String = name
+    init {
+        this.position += (1..5).random()
     }
-}
+        override fun go() {
+            println("$name:$position")
+        }
+    }
 
-class BMW(position: Int, name: String):RacingCar(position), Run {
-    override fun go(position: Int,name: String) {
+
+class BMW(position: Int, override var name: String):RacingCar(position), Run {
+    init {
+        this.position += (1..5).random()
+    }
+    override fun go() {
         println("$name:$position")
     }
 }
 
 
 fun main(){
-    var mSpend = 1
-    var fSpend = 1
-    var bSpend = 1
-    val mercedes = Mercedes(75,"Mercedes")
-    val ferrari = Ferrari(23,"Ferrari")
-    val bmw = BMW(10,"BMW")
+    val mercedes = Mercedes(1,"Mercedes")
+    val ferrari = Ferrari(1,"Ferrari")
+    val bmw = BMW(1,"BMW")
     while (true) {
-        mSpend += ((1..5).random())
-        fSpend += ((1..5).random())
-        bSpend += ((1..5).random())
-        mercedes.go(mSpend,"Mercedes")
-        if (mSpend >= 200){
+        mercedes.go()
+        ferrari.go()
+        bmw.go()
+        if (mercedes.position >= 200){
             println("----------------------")
             println("The Winner is: Mercedes")
             break
         }
-        ferrari.go(fSpend,"Ferrari")
-        if (fSpend >= 200){
+        if (ferrari.position >= 200){
             println("----------------------")
             println("The Winner is: Ferrari")
             break
         }
-        bmw.go(bSpend,"BMW")
-        if (bSpend >= 200){
+        if (bmw.position >= 200){
             println("----------------------")
             println("The Winner is: BMW")
             break

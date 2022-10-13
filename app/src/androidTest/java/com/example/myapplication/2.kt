@@ -1,60 +1,52 @@
 package com.example.myapplication
-
-
-
-open class RacingCar(val position: Int)
-
-class Mercedes(position: Int, name: String): RacingCar(position), Run {
-    override fun go(position: Int,name: String) {
-        println("$name:$position")
-    }
-}
-
-class Ferrari(position: Int, name: String):RacingCar(position), Run {
-    override fun go(position: Int,name: String) {
-        println("$name:$position")
-    }
-}
-
-class BMW(position: Int, name: String):RacingCar(position), Run {
-    override fun go(position: Int,name: String) {
-        println("$name:$position")
-    }
-}
-
 interface Run{
     fun go(position: Int,name: String){
         println("车开始跑")
     }
 }
-
+open class RacingCar(val position: Int)
+class Mercedes(position: Int, name: String): RacingCar(position), Run {
+    override fun go(position: Int,name: String) {
+        println("$name:$position")
+    }
+}
+class Ferrari(position: Int, name: String):RacingCar(position), Run {
+    override fun go(position: Int,name: String) {
+        println("$name:$position")
+    }
+}
+class BMW(position: Int, name: String):RacingCar(position), Run {
+    override fun go(position: Int,name: String) {
+        println("$name:$position")
+    }
+}
 fun main(){
-    var M= 1
-    var F= 1
-    var B= 1
-    var p = true
+    var MM= 1
+    var FF= 1
+    var BB= 1
+    var K = true
     val mercedes= Mercedes(75,"Mercedes")
     val ferrari= Ferrari(23,"Ferrari")
     val bmw=BMW(10,"BMW")
-    while(p) {
-        M+= ((1..5).random())
-        F+= ((1..5).random())
-        B+= ((1..5).random())
-        mercedes.go(M,"Mercedes")
-        ferrari.go(F,"Ferrari")
-        bmw.go(B,"BMW")
+    while(K) {
+        MM+= ((1..5).random())
+        FF+= ((1..5).random())
+        BB+= ((1..5).random())
+        mercedes.go(MM,"Mercedes")
+        ferrari.go(FF,"Ferrari")
+        bmw.go(BB,"BMW")
         println("----------------------")
-        if (M>= 200){
+        if (MM>= 200){
             println("The Winner is: Mercedes")
-            p = false
+            K = false
         }
-        else  if (F>= 200){
+        else  if (FF>= 200){
             println("The Winner is: Ferrari")
-            p = false
+            K = false
         }
-        else if (B>= 200){
+        else if (BB>= 200){
             println("The Winner is: BMW")
-            p = false
+            K = false
         }
     }
 }

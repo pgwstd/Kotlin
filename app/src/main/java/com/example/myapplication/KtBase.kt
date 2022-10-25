@@ -11,11 +11,11 @@ fun main() {
 
     //实现函数
     methodAction = {
-        val inputValue = 999
+        val inputValue = 999999
         //匿名函数最后一行就是返回值
         "$inputValue pgwstr"
 
     }
     //调用输出函数
-    println(methodAction)
+    println(methodAction())
 }

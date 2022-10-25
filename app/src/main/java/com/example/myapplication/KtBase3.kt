@@ -12,4 +12,14 @@ fun main() {
 
     println(method1(1.1, 1.5f, 2))
 
+    val method2 = {
+        3.14f
+    }
+    println(method2())
+
+    val method3 = { number: Int ->
+        number
+    }
+
+    println(method3(123))
 }

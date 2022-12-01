@@ -68,7 +68,7 @@ fun main(){
         in 3 .. 5 -> println("理学学士")  //区间选择
         6 -> println("工学学士")
         7 -> println("农学学士")
-        else -> println("基他学士")
+        else -> println("其他学士")
     }
 
 }

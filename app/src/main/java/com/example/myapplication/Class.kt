@@ -14,11 +14,11 @@ open class Person{
 fun main(){
     val empty = EmptyClass()
     val peter = Person()
-    val susan = Student()
     println(empty.toString())
     peter.name = "Peter"
     peter.age = 14
     println(peter.age)
+    val susan = Person()
     susan.name = "Susan"
     susan.age = 20
     println(susan.age)
